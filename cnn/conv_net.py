@@ -1,10 +1,10 @@
 import torch 
 import torch.nn as nn
 
-class CNN(nn.Module):
+class ConvNet(nn.Module):
 
     def __init__(self, num_classes = 10):
-        super(CNN, self).__init__()
+        super(ConvNet, self).__init__()
         # Add sequential layers: 2 Conv and 1 FC
         self.conv1 = nn.Sequential(
             nn.Conv2d(1, 16, kernel_size=5, stride=1, padding=2),
@@ -24,3 +24,5 @@ class CNN(nn.Module):
         output = output.reshape(output.size(0), -1)
         output = self.fc(output)
         return output
+
+    
