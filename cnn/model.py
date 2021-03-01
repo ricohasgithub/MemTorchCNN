@@ -9,6 +9,11 @@ class Model():
 
     def __init__(self, num_epochs=5, num_classes=10, batch_size=100, learning_rate=0.001):
 
+        self.num_epochs = num_epochs
+        self.num_classes = num_classes
+        self.batch_size = batch_size
+        self.learning_rate = learning_rate
+
         self.model = ConvNet(num_classes)
 
         # Loss and optimizer
@@ -23,7 +28,7 @@ class Model():
             for i, (images, labels) in enumerate(train_loader):
                 # Forward pass
                 outputs = self.model(images)
-                loss = criterion(outputs, labels)
+                loss = self.criterion(outputs, labels)
                 
                 # Backward and optimize
                 self.optimizer.zero_grad()
