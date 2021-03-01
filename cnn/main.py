@@ -3,6 +3,8 @@ import torch.nn as nn
 import torchvision
 import torchvision.transforms as transforms
 
+from cnn import CNN
+
 # Hyper parameters
 num_epochs = 5
 num_classes = 10
