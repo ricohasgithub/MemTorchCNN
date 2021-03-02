@@ -16,4 +16,3 @@ reference_memristor_params = {'time_series_resolution': 1e-10}
 memristor = reference_memristor(**reference_memristor_params)
 memristor.plot_hysteresis_loop()
 
-print("Hello world")
